@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Products</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h5>Import Products</h5>
+    <div class="form-section" style="float:left;">
+        <h5 style="display:inline;">Step 1:</h5> &emsp;<p style="display:inline;"> Select File <br></p>
+        &emsp;&emsp;&emsp;&emsp;&nbsp;<input type="file" id="file" accept=".csv, .json">
+        <div class="file-types">
+            <p>
+                &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                Supported File Type(s): .CSV, JSON
+            </p>
+        </div>
+    </div>
+    <div class="file-format" style="float:right;">
+        <h5 style="display:inline;">Step 2: </h5> &emsp;<p style="display:inline;">Specify Format <br>
+            &emsp;&emsp;&emsp;&emsp;
+            <label for="fileType">&nbsp;File Type:</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+            <select id="fileType" style="width:150px;">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;
+            <label for="charset">&nbsp;Character Encoding :</label>&emsp;&emsp;&emsp;&nbsp;
+            <select id="charset" style="width:150px;">
+                <option value="utf-8">UTF-8</option>
+                <option value="utf-16">UTF-16</option>
+            </select>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;
+            <label for="delimiter">&nbsp;Delimiter :</label>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+            <select id="delimiter" style="width:150px;">
+                <option value="comma">Comma</option>
+                <option value="tab">Tab</option>
+            </select>
+            <br>
+            &emsp;&emsp;&emsp;&emsp;
+            <label for="header">&nbsp;Has Header:</label>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+            <input type="checkbox" id="header">
+            <p>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div class="display-handling">
+        <h5 style="display:inline;">Step 3:</h5>&emsp;
+        <p style="display:inline;">Display Handling<br>
+            <p>Available Fields:</p>
+            <div class="available-fields" style="float:left;">
+                <label for="productId">Product Id</label><br>
+                <label for="subcategory">Subcategory</label><br>
+                <label for="title">Title</label><br>
+                <label for="price">Price</label><br>
+                <label for="popularity">Popularity</label><br>
+                <label for="description">Description</label><br>
+                <label for="rating">Rating</label><br>
+                <label for="utmSource">UTM Source</label><br>
+                <label for="utmMedium">UTM Medium</label><br>
+            </div>
+            <div class="fields-to-display" style="float:right;">
+                <p>Fields to be Displayed:</p>
+                <input type="checkbox" id="productId" checked><br>
+                <input type="checkbox" id="subcategory" checked><br>
+                <input type="checkbox" id="title" checked><br>
+                <input type="checkbox" id="price"><br>
+                <input type="checkbox" id="popularity"><br>
+                <input type="checkbox" id="description"><br>
+                <input type="checkbox" id="rating"><br>
+                <input type="checkbox" id="utmSource"><br>
+                <input type="checkbox" id="utmMedium"><br>
+            </div>
+        </p>
+    </div>
+    <div class="form-buttons" style="float:right;">
+        <button type="button">Next</button>
+        <button type="button">Cancel</button>
+    </div>
+    </div>
+    </div>
+    <div id="output">
+        Output
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
